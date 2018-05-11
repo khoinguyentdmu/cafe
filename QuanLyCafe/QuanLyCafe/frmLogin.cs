@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using QuanLyCafe.DAO;
 
 namespace QuanLyCafe
 {
@@ -49,12 +50,16 @@ namespace QuanLyCafe
         private void btnLogin_Click(object sender, EventArgs e)
         {
             txtUsername.Focus();
-            if (IsLoggedIn(txtUsername.Text, txtPassword.Text))
+            if (AccountDAO.Instance.DangNhap(txtUsername.Text, txtPassword.Text))
             {
                 frmMain frm = new frmMain();
                 this.Hide();
                 frm.ShowDialog();
                 this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

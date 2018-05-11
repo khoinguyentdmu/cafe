@@ -150,6 +150,8 @@
             // dgvDrinkList
             // 
             this.dgvDrinkList.AllowUserToAddRows = false;
+            this.dgvDrinkList.AllowUserToDeleteRows = false;
+            this.dgvDrinkList.AllowUserToOrderColumns = true;
             this.dgvDrinkList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDrinkList.Location = new System.Drawing.Point(6, 18);
             this.dgvDrinkList.MultiSelect = false;
