@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ThongTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chấmCôngToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +46,11 @@
             this.lblNotify = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.numUpDownNumOfDrink = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,21 +59,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDrinkOrder = new System.Windows.Forms.DataGridView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtTotalPrice = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNameOfDrink = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumberOfDrink = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colUnitPirce = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.ThongTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -101,6 +101,22 @@
             this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
+            // ThongTinToolStripMenuItem
+            // 
+            this.ThongTinToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinToolStripMenuItem.Image")));
+            this.ThongTinToolStripMenuItem.Name = "ThongTinToolStripMenuItem";
+            this.ThongTinToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.ThongTinToolStripMenuItem.Text = "Thông tin tài khoản";
+            this.ThongTinToolStripMenuItem.Click += new System.EventHandler(this.ThongTinToolStripMenuItem_Click);
+            // 
+            // DangXuatToolStripMenuItem
+            // 
+            this.DangXuatToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DangXuatToolStripMenuItem.Image")));
+            this.DangXuatToolStripMenuItem.Name = "DangXuatToolStripMenuItem";
+            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.DangXuatToolStripMenuItem.Text = "Đăng xuất";
+            this.DangXuatToolStripMenuItem.Click += new System.EventHandler(this.DangXuatToolStripMenuItem_Click);
+            // 
             // quảnLýToolStripMenuItem
             // 
             this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -125,6 +141,7 @@
             // 
             // thứcUốngToolStripMenuItem
             // 
+            this.thứcUốngToolStripMenuItem.Image = global::QuanLyCafe.Properties.Resources.icon_drink;
             this.thứcUốngToolStripMenuItem.Name = "thứcUốngToolStripMenuItem";
             this.thứcUốngToolStripMenuItem.Size = new System.Drawing.Size(263, 24);
             this.thứcUốngToolStripMenuItem.Text = "Thức uống";
@@ -209,6 +226,100 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(300, 2);
             this.label4.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = global::QuanLyCafe.Properties.Resources.icon_delete;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.Location = new System.Drawing.Point(108, 124);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(91, 71);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Xóa thức uống";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::QuanLyCafe.Properties.Resources.icon_update;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.Location = new System.Drawing.Point(6, 124);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 71);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Cập nhật số lượng";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Image = global::QuanLyCafe.Properties.Resources.icon_print;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.Location = new System.Drawing.Point(107, 209);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(194, 71);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Thanh toán và in hóa đơn";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Image = global::QuanLyCafe.Properties.Resources.icon_plus;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.Location = new System.Drawing.Point(6, 209);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(91, 71);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Tạo mới hóa đơn";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.Black;
+            this.btnThem.Image = global::QuanLyCafe.Properties.Resources.icon_next;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThem.Location = new System.Drawing.Point(210, 124);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(91, 71);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "Thêm vào hóa đơn";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panel3
             // 
@@ -308,46 +419,6 @@
             this.dgvDrinkOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDrinkOrder_CellClick);
             this.dgvDrinkOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox3.Controls.Add(this.txtTotalPrice);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox3.Location = new System.Drawing.Point(331, 340);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(495, 47);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thành tiền";
-            // 
-            // txtTotalPrice
-            // 
-            this.txtTotalPrice.Location = new System.Drawing.Point(292, 17);
-            this.txtTotalPrice.Name = "txtTotalPrice";
-            this.txtTotalPrice.ReadOnly = true;
-            this.txtTotalPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtTotalPrice.Size = new System.Drawing.Size(149, 24);
-            this.txtTotalPrice.TabIndex = 0;
-            this.txtTotalPrice.Text = "100.000";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(447, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 18);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "VND";
-            // 
             // colID
             // 
             this.colID.HeaderText = "ID";
@@ -375,115 +446,45 @@
             this.colUnitPirce.Name = "colUnitPirce";
             this.colUnitPirce.ReadOnly = true;
             // 
-            // button2
+            // timer1
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::QuanLyCafe.Properties.Resources.icon_delete;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.Location = new System.Drawing.Point(108, 124);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 71);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Xóa thức uống";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button1
+            // groupBox3
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::QuanLyCafe.Properties.Resources.icon_update;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.Location = new System.Drawing.Point(6, 124);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 71);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cập nhật thức uống";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox3.Controls.Add(this.txtTotalPrice);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox3.Location = new System.Drawing.Point(331, 340);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(495, 47);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thành tiền";
             // 
-            // button3
+            // txtTotalPrice
             // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::QuanLyCafe.Properties.Resources.icon_print;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.Location = new System.Drawing.Point(107, 209);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 71);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Thanh toán và in hóa đơn";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button3.UseVisualStyleBackColor = true;
+            this.txtTotalPrice.Location = new System.Drawing.Point(292, 17);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.ReadOnly = true;
+            this.txtTotalPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtTotalPrice.Size = new System.Drawing.Size(149, 24);
+            this.txtTotalPrice.TabIndex = 0;
+            this.txtTotalPrice.Text = "0";
             // 
-            // button4
+            // label5
             // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::QuanLyCafe.Properties.Resources.icon_plus;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.Location = new System.Drawing.Point(6, 209);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 71);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Tạo mới hóa đơn";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.Black;
-            this.btnThem.Image = global::QuanLyCafe.Properties.Resources.icon_next;
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnThem.Location = new System.Drawing.Point(210, 124);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(91, 71);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm vào hóa đơn";
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // ThongTinToolStripMenuItem
-            // 
-            this.ThongTinToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinToolStripMenuItem.Image")));
-            this.ThongTinToolStripMenuItem.Name = "ThongTinToolStripMenuItem";
-            this.ThongTinToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
-            this.ThongTinToolStripMenuItem.Text = "Thông tin tài khoản";
-            this.ThongTinToolStripMenuItem.Click += new System.EventHandler(this.ThongTinToolStripMenuItem_Click);
-            // 
-            // DangXuatToolStripMenuItem
-            // 
-            this.DangXuatToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DangXuatToolStripMenuItem.Image")));
-            this.DangXuatToolStripMenuItem.Name = "DangXuatToolStripMenuItem";
-            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
-            this.DangXuatToolStripMenuItem.Text = "Đăng xuất";
-            this.DangXuatToolStripMenuItem.Click += new System.EventHandler(this.DangXuatToolStripMenuItem_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(447, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 18);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "VND";
             // 
             // frmMain
             // 

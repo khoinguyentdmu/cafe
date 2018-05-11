@@ -100,7 +100,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icon_drink.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_info.png" />
   </ItemGroup>

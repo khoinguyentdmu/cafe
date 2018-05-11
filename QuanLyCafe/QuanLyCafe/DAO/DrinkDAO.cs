@@ -35,36 +35,28 @@ namespace QuanLyCafe.DAO
             Drink drink= new Drink(data.Rows[0]);
             return drink;
         }
+
+        public bool insertDrink(string nameOfDrink, string unitPrice)
+        {
+            string query = "USP_InsertDrink @name , @unitPrice";
+            int res = DataProvider.Instance.ExecuteNonQuery(query, new object[] { nameOfDrink, unitPrice });
+            return res > 0;
+        }
+
+        public bool deleteDrink(string ID)
+        {
+            string query = "USP_DeleteDrink @ID";
+            int res = DataProvider.Instance.ExecuteNonQuery(query, new object[]{ID});
+            return res > 0;
+        }
+
+        public bool updateDrink(string id, string nameOfDrink, string unitPrice)
+        {
+            string query = "USP_UpdateDrink @ID , @NAME , @UNITPRICE";
+            int res = DataProvider.Instance.ExecuteNonQuery(query, new object[]{id, nameOfDrink, unitPrice});
+            return res > 0;
+        }
         /*
-        //Thêm phòng
-        public bool insertPhong(string maPhong, string tenPhong, string maLoaiPhong, string ghiChu, bool dangThue)
-        {
-            string query = "USP_InsertPhong @MP , @TENPHONG , @MALOAIPHONG , @TINHTRANG , @GHICHU";
-
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] {maPhong, tenPhong, maLoaiPhong, dangThue, ghiChu});
-
-            return result > 0;
-        }
-        
-        //Xóa phòng
-        public bool deletePhong(string maPhong)
-        {
-            string query = "USP_DeletePhong @MP";
-
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { maPhong });
-
-            return result > 0;
-        }
-
-        //Cập nhật phòng
-        public bool updatePhong(string maPhong, string tenPhong, string maLoaiPhong, string ghiChu, bool dangThue)
-        {
-            string query = "EXEC USP_UpdatePhong @MP , @TENPHONG , @MALOAIPHONG , @TINHTRANG , @GHICHU";
-
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { maPhong, tenPhong, maLoaiPhong, dangThue, ghiChu});
-
-            return result > 0;
-        }
 
         //Tìm phòng
         public List<Phong> FindPhong(string maPhong)

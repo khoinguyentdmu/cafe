@@ -119,6 +119,7 @@ namespace QuanLyCafe
             this.Hide();
             frm.ShowDialog();
             this.Show();
+            loadDrinksListToComboBox();
         }
     }
 }
