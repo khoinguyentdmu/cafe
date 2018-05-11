@@ -32,48 +32,48 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ThongTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chấmCôngToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thứcUốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoDanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêLươngNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboNameOfDrink = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numUpDownNumOfString = new System.Windows.Forms.NumericUpDown();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNameOfDrink = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNumberOfDrink = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thứcUốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.ThongTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.numUpDownNumOfDrink = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cboNameOfDrink = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvDrinkOrder = new System.Windows.Forms.DataGridView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNameOfDrink = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumberOfDrink = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numUpDownNumOfString)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownNumOfDrink)).BeginInit();
+            this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDrinkOrder)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +100,22 @@
             this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
+            // ThongTinToolStripMenuItem
+            // 
+            this.ThongTinToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinToolStripMenuItem.Image")));
+            this.ThongTinToolStripMenuItem.Name = "ThongTinToolStripMenuItem";
+            this.ThongTinToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.ThongTinToolStripMenuItem.Text = "Thông tin tài khoản";
+            this.ThongTinToolStripMenuItem.Click += new System.EventHandler(this.ThongTinToolStripMenuItem_Click);
+            // 
+            // DangXuatToolStripMenuItem
+            // 
+            this.DangXuatToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DangXuatToolStripMenuItem.Image")));
+            this.DangXuatToolStripMenuItem.Name = "DangXuatToolStripMenuItem";
+            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.DangXuatToolStripMenuItem.Text = "Đăng xuất";
+            this.DangXuatToolStripMenuItem.Click += new System.EventHandler(this.DangXuatToolStripMenuItem_Click);
+            // 
             // quảnLýToolStripMenuItem
             // 
             this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -121,6 +137,12 @@
             this.thôngTinNhânViênToolStripMenuItem.Name = "thôngTinNhânViênToolStripMenuItem";
             this.thôngTinNhânViênToolStripMenuItem.Size = new System.Drawing.Size(263, 24);
             this.thôngTinNhânViênToolStripMenuItem.Text = "Thông tin nhân viên";
+            // 
+            // thứcUốngToolStripMenuItem
+            // 
+            this.thứcUốngToolStripMenuItem.Name = "thứcUốngToolStripMenuItem";
+            this.thứcUốngToolStripMenuItem.Size = new System.Drawing.Size(263, 24);
+            this.thứcUốngToolStripMenuItem.Text = "Thức uống";
             // 
             // báoCáoToolStripMenuItem
             // 
@@ -154,6 +176,26 @@
             this.panel1.Size = new System.Drawing.Size(734, 36);
             this.panel1.TabIndex = 1;
             // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(571, 9);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(41, 18);
+            this.lblTime.TabIndex = 0;
+            this.lblTime.Text = "Time";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(520, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Vui lòng chọn thức uống từ combo box và nhập số lượng để thêm vào hóa đơn";
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -174,110 +216,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Order";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.cboNameOfDrink);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(6, 23);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(298, 35);
-            this.panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(13, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thức uống";
-            // 
-            // cboNameOfDrink
-            // 
-            this.cboNameOfDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboNameOfDrink.FormattingEnabled = true;
-            this.cboNameOfDrink.Location = new System.Drawing.Point(106, 6);
-            this.cboNameOfDrink.Name = "cboNameOfDrink";
-            this.cboNameOfDrink.Size = new System.Drawing.Size(189, 26);
-            this.cboNameOfDrink.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.numUpDownNumOfString);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(6, 61);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(298, 36);
-            this.panel3.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(13, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Số lượng";
-            // 
-            // numUpDownNumOfString
-            // 
-            this.numUpDownNumOfString.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUpDownNumOfString.Location = new System.Drawing.Point(106, 6);
-            this.numUpDownNumOfString.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numUpDownNumOfString.MinimumSize = new System.Drawing.Size(189, 0);
-            this.numUpDownNumOfString.Name = "numUpDownNumOfString";
-            this.numUpDownNumOfString.Size = new System.Drawing.Size(189, 24);
-            this.numUpDownNumOfString.TabIndex = 1;
-            this.numUpDownNumOfString.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox2.Location = new System.Drawing.Point(331, 43);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(395, 291);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Hóa đơn";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(520, 18);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Vui lòng chọn thức uống từ combo box và nhập số lượng để thêm vào hóa đơn";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNo,
-            this.colNameOfDrink,
-            this.colNumberOfDrink});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(379, 257);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -285,48 +223,6 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(300, 2);
             this.label4.TabIndex = 2;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(571, 9);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(41, 18);
-            this.lblTime.TabIndex = 0;
-            this.lblTime.Text = "Time";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // colNo
-            // 
-            this.colNo.HeaderText = "STT";
-            this.colNo.Name = "colNo";
-            this.colNo.ReadOnly = true;
-            this.colNo.Width = 50;
-            // 
-            // colNameOfDrink
-            // 
-            this.colNameOfDrink.HeaderText = "Thức uống";
-            this.colNameOfDrink.Name = "colNameOfDrink";
-            this.colNameOfDrink.ReadOnly = true;
-            this.colNameOfDrink.Width = 180;
-            // 
-            // colNumberOfDrink
-            // 
-            this.colNumberOfDrink.HeaderText = "Số lượng";
-            this.colNumberOfDrink.Name = "colNumberOfDrink";
-            this.colNumberOfDrink.ReadOnly = true;
-            this.colNumberOfDrink.Width = 90;
-            // 
-            // thứcUốngToolStripMenuItem
-            // 
-            this.thứcUốngToolStripMenuItem.Name = "thứcUốngToolStripMenuItem";
-            this.thứcUốngToolStripMenuItem.Size = new System.Drawing.Size(263, 24);
-            this.thứcUốngToolStripMenuItem.Text = "Thức uống";
             // 
             // button2
             // 
@@ -417,22 +313,106 @@
             this.btnThem.Text = "Thêm vào hóa đơn";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // ThongTinToolStripMenuItem
+            // panel3
             // 
-            this.ThongTinToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinToolStripMenuItem.Image")));
-            this.ThongTinToolStripMenuItem.Name = "ThongTinToolStripMenuItem";
-            this.ThongTinToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
-            this.ThongTinToolStripMenuItem.Text = "Thông tin tài khoản";
-            this.ThongTinToolStripMenuItem.Click += new System.EventHandler(this.ThongTinToolStripMenuItem_Click);
+            this.panel3.Controls.Add(this.numUpDownNumOfDrink);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(6, 61);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(298, 36);
+            this.panel3.TabIndex = 0;
             // 
-            // DangXuatToolStripMenuItem
+            // numUpDownNumOfDrink
             // 
-            this.DangXuatToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DangXuatToolStripMenuItem.Image")));
-            this.DangXuatToolStripMenuItem.Name = "DangXuatToolStripMenuItem";
-            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
-            this.DangXuatToolStripMenuItem.Text = "Đăng xuất";
-            this.DangXuatToolStripMenuItem.Click += new System.EventHandler(this.DangXuatToolStripMenuItem_Click);
+            this.numUpDownNumOfDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numUpDownNumOfDrink.Location = new System.Drawing.Point(106, 6);
+            this.numUpDownNumOfDrink.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numUpDownNumOfDrink.MinimumSize = new System.Drawing.Size(189, 0);
+            this.numUpDownNumOfDrink.Name = "numUpDownNumOfDrink";
+            this.numUpDownNumOfDrink.Size = new System.Drawing.Size(189, 24);
+            this.numUpDownNumOfDrink.TabIndex = 1;
+            this.numUpDownNumOfDrink.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(13, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Số lượng";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cboNameOfDrink);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(6, 23);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(298, 35);
+            this.panel2.TabIndex = 0;
+            // 
+            // cboNameOfDrink
+            // 
+            this.cboNameOfDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNameOfDrink.FormattingEnabled = true;
+            this.cboNameOfDrink.Location = new System.Drawing.Point(106, 6);
+            this.cboNameOfDrink.Name = "cboNameOfDrink";
+            this.cboNameOfDrink.Size = new System.Drawing.Size(189, 26);
+            this.cboNameOfDrink.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Thức uống";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox2.Controls.Add(this.dgvDrinkOrder);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox2.Location = new System.Drawing.Point(331, 43);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(395, 291);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Hóa đơn";
+            // 
+            // dgvDrinkOrder
+            // 
+            this.dgvDrinkOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDrinkOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colID,
+            this.colNameOfDrink,
+            this.colNumberOfDrink});
+            this.dgvDrinkOrder.Location = new System.Drawing.Point(6, 23);
+            this.dgvDrinkOrder.Name = "dgvDrinkOrder";
+            this.dgvDrinkOrder.Size = new System.Drawing.Size(379, 257);
+            this.dgvDrinkOrder.TabIndex = 0;
+            this.dgvDrinkOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // groupBox3
             // 
@@ -469,6 +449,27 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "VND";
             // 
+            // colID
+            // 
+            this.colID.HeaderText = "ID";
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            this.colID.Width = 50;
+            // 
+            // colNameOfDrink
+            // 
+            this.colNameOfDrink.HeaderText = "Thức uống";
+            this.colNameOfDrink.Name = "colNameOfDrink";
+            this.colNameOfDrink.ReadOnly = true;
+            this.colNameOfDrink.Width = 180;
+            // 
+            // colNumberOfDrink
+            // 
+            this.colNumberOfDrink.HeaderText = "Số lượng";
+            this.colNumberOfDrink.Name = "colNumberOfDrink";
+            this.colNumberOfDrink.ReadOnly = true;
+            this.colNumberOfDrink.Width = 90;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -497,13 +498,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numUpDownNumOfString)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownNumOfDrink)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDrinkOrder)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -527,14 +528,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.NumericUpDown numUpDownNumOfString;
+        private System.Windows.Forms.NumericUpDown numUpDownNumOfDrink;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cboNameOfDrink;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDrinkOrder;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
@@ -542,13 +543,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNameOfDrink;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNumberOfDrink;
         private System.Windows.Forms.ToolStripMenuItem thứcUốngToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNameOfDrink;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNumberOfDrink;
     }
 }
 
