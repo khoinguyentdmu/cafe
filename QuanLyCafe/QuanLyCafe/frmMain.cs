@@ -23,17 +23,12 @@ namespace QuanLyCafe
 
         private void DangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void ThoatToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            Dispose();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -11,9 +11,51 @@ namespace QuanLyCafe
 {
     public partial class frmLogin : Form
     {
+        public String Username= "admin";
+        public String Password= "admin";
+
+        public bool IsLoggedIn(string Username, string Password)
+        {
+            if (string.IsNullOrEmpty(Username))
+            {
+                MessageBox.Show("Nhập Username", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (string.IsNullOrEmpty(Password))
+            {
+                MessageBox.Show("Nhập Password", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (this.Username == Username && this.Password == Password)
+            {
+
+                return true;
+            }
+            MessageBox.Show("Sai thông tin đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return false;
+        }
+
         public frmLogin()
         {
             InitializeComponent();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            txtUsername.Text = "admin";
+            txtPassword.Text = "admin";
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            txtUsername.Focus();
+            if (IsLoggedIn(txtUsername.Text, txtPassword.Text))
+            {
+                frmMain frm = new frmMain();
+                this.Hide();
+                frm.ShowDialog();
+                this.Show();
+            }
         }
     }
 }

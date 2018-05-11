@@ -33,7 +33,6 @@
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ThongTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ThoatToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chấmCôngToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,21 +56,18 @@
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
             this.menuStrip1.Size = new System.Drawing.Size(984, 30);
             this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // tàiKhoảnToolStripMenuItem
             // 
             this.tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ThongTinToolStripMenuItem,
-            this.DangXuatToolStripMenuItem,
-            this.ThoatToolStripMenuItem1});
+            this.DangXuatToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
             this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // ThongTinToolStripMenuItem
             // 
-            this.ThongTinToolStripMenuItem.Image = global::QuanLyCafe.Properties.Resources.icon_info;
             this.ThongTinToolStripMenuItem.Name = "ThongTinToolStripMenuItem";
             this.ThongTinToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
             this.ThongTinToolStripMenuItem.Text = "Thông tin tài khoản";
@@ -79,19 +75,10 @@
             // 
             // DangXuatToolStripMenuItem
             // 
-            this.DangXuatToolStripMenuItem.Image = global::QuanLyCafe.Properties.Resources.icon_logout;
             this.DangXuatToolStripMenuItem.Name = "DangXuatToolStripMenuItem";
             this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
             this.DangXuatToolStripMenuItem.Text = "Đăng xuất";
             this.DangXuatToolStripMenuItem.Click += new System.EventHandler(this.DangXuatToolStripMenuItem_Click);
-            // 
-            // ThoatToolStripMenuItem1
-            // 
-            this.ThoatToolStripMenuItem1.Image = global::QuanLyCafe.Properties.Resources.icon_exit;
-            this.ThoatToolStripMenuItem1.Name = "ThoatToolStripMenuItem1";
-            this.ThoatToolStripMenuItem1.Size = new System.Drawing.Size(206, 24);
-            this.ThoatToolStripMenuItem1.Text = "Thoát";
-            this.ThoatToolStripMenuItem1.Click += new System.EventHandler(this.ThoatToolStripMenuItem1_Click);
             // 
             // quảnLýToolStripMenuItem
             // 
@@ -177,7 +164,6 @@
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DangXuatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ThongTinToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ThoatToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chấmCôngToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem thôngTinNhânViênToolStripMenuItem;
