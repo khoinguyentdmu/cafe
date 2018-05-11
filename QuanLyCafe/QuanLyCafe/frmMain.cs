@@ -59,6 +59,7 @@ namespace QuanLyCafe
             dgvDrinkOrder.Rows.Add(new object[] {idOfDrink, nameOfDrink, numberOfDrink, priceOfDrink});
 
             calTotalPrice();
+            lblNotify.Text = "Bạn đã thêm thức uống thành công";
         }
 
         private void calTotalPrice()
@@ -77,6 +78,7 @@ namespace QuanLyCafe
             {
                 int index = dgvDrinkOrder.CurrentRow.Index;
                 dgvDrinkOrder.Rows.RemoveAt(index);
+                lblNotify.Text = "Đã xóa thức uống thành công";
             }
             catch (Exception)
             {
@@ -92,6 +94,7 @@ namespace QuanLyCafe
                 numUpDownNumOfDrink.DataBindings.RemoveAt(0);
             }
             numUpDownNumOfDrink.DataBindings.Add(new Binding("Text", dgvDrinkOrder[2, e.RowIndex], "value", false));
+            lblNotify.Text = "Đang chọn 1 thức uống";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -99,12 +102,23 @@ namespace QuanLyCafe
             for (int i = 0; i < dgvDrinkOrder.RowCount; i++)
                 dgvDrinkOrder.Rows[i].Selected = false;
             calTotalPrice();
+
+            lblNotify.Text = "Cập nhật thành công";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             dgvDrinkOrder.Rows.Clear();
             calTotalPrice();
+            lblNotify.Text = "Vui lòng chọn thức uống từ combo box và nhập số lượng để thêm vào hóa đơn";
+        }
+
+        private void thứcUốngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDrink frm = new frmDrink();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }

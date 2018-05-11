@@ -50,6 +50,12 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DrinkDAO.cs" />
     <Compile Include="DTO\Drink.cs" />
+    <Compile Include="frmDrink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrink.Designer.cs">
+      <DependentUpon>frmDrink.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="app.config" />
+    <EmbeddedResource Include="frmDrink.resx">
+      <DependentUpon>frmDrink.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
