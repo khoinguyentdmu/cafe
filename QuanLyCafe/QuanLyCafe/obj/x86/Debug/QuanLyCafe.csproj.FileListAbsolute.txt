@@ -1,0 +1,7 @@
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\bin\Debug\QuanLyCafe.exe
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\bin\Debug\QuanLyCafe.pdb
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.Form1.resources
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.Properties.Resources.resources
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.csproj.GenerateResource.Cache
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.exe
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.pdb
