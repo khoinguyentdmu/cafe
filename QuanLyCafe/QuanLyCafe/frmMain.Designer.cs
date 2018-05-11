@@ -47,7 +47,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -61,11 +60,13 @@
             this.dgvDrinkOrder = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNameOfDrink = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumberOfDrink = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUnitPirce = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -88,7 +89,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(734, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(834, 30);
             this.menuStrip1.TabIndex = 0;
             // 
             // tàiKhoảnToolStripMenuItem
@@ -173,14 +174,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 405);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(734, 36);
+            this.panel1.Size = new System.Drawing.Size(834, 36);
             this.panel1.TabIndex = 1;
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(571, 9);
+            this.lblTime.Location = new System.Drawing.Point(647, 9);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(41, 18);
             this.lblTime.TabIndex = 0;
@@ -241,24 +242,7 @@
             this.button2.Text = "Xóa thức uống";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::QuanLyCafe.Properties.Resources.icon_update;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.Location = new System.Drawing.Point(6, 124);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 71);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cập nhật thức uống";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -295,6 +279,7 @@
             this.button4.Text = "Tạo mới hóa đơn";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnThem
             // 
@@ -391,22 +376,26 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Blue;
             this.groupBox2.Location = new System.Drawing.Point(331, 43);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(395, 291);
+            this.groupBox2.Size = new System.Drawing.Size(495, 291);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hóa đơn";
             // 
             // dgvDrinkOrder
             // 
+            this.dgvDrinkOrder.AllowUserToAddRows = false;
             this.dgvDrinkOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDrinkOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
             this.colNameOfDrink,
-            this.colNumberOfDrink});
+            this.colNumberOfDrink,
+            this.colUnitPirce});
             this.dgvDrinkOrder.Location = new System.Drawing.Point(6, 23);
             this.dgvDrinkOrder.Name = "dgvDrinkOrder";
-            this.dgvDrinkOrder.Size = new System.Drawing.Size(379, 257);
+            this.dgvDrinkOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDrinkOrder.Size = new System.Drawing.Size(480, 257);
             this.dgvDrinkOrder.TabIndex = 0;
+            this.dgvDrinkOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDrinkOrder_CellClick);
             this.dgvDrinkOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // timer1
@@ -417,37 +406,56 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtTotalPrice);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Blue;
             this.groupBox3.Location = new System.Drawing.Point(331, 340);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(395, 47);
+            this.groupBox3.Size = new System.Drawing.Size(495, 47);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thành tiền";
             // 
-            // textBox1
+            // txtTotalPrice
             // 
-            this.textBox1.Location = new System.Drawing.Point(210, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox1.Size = new System.Drawing.Size(130, 24);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "100.000";
+            this.txtTotalPrice.Location = new System.Drawing.Point(292, 17);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.ReadOnly = true;
+            this.txtTotalPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtTotalPrice.Size = new System.Drawing.Size(149, 24);
+            this.txtTotalPrice.TabIndex = 0;
+            this.txtTotalPrice.Text = "100.000";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(346, 15);
+            this.label5.Location = new System.Drawing.Point(447, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 18);
             this.label5.TabIndex = 0;
             this.label5.Text = "VND";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::QuanLyCafe.Properties.Resources.icon_update;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.Location = new System.Drawing.Point(6, 124);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 71);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Cập nhật thức uống";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // colID
             // 
@@ -470,12 +478,18 @@
             this.colNumberOfDrink.ReadOnly = true;
             this.colNumberOfDrink.Width = 90;
             // 
+            // colUnitPirce
+            // 
+            this.colUnitPirce.HeaderText = "Đơn giá";
+            this.colUnitPirce.Name = "colUnitPirce";
+            this.colUnitPirce.ReadOnly = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(734, 441);
+            this.ClientSize = new System.Drawing.Size(834, 441);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -486,9 +500,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(750, 480);
+            this.MaximumSize = new System.Drawing.Size(850, 480);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(750, 480);
+            this.MinimumSize = new System.Drawing.Size(850, 480);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ QUÁN CAFE";
@@ -537,7 +551,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvDrinkOrder;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label4;
@@ -545,11 +558,13 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem thứcUốngToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTotalPrice;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNameOfDrink;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumberOfDrink;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colUnitPirce;
     }
 }
 

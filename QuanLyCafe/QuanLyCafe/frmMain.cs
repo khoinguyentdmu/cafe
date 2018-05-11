@@ -54,8 +54,57 @@ namespace QuanLyCafe
         {
             int idOfDrink = Int32.Parse(cboNameOfDrink.SelectedValue.ToString());
             string nameOfDrink = DrinkDAO.Instance.getDink(idOfDrink).getNameOfDrink();
+            int priceOfDrink = DrinkDAO.Instance.getDink(idOfDrink).getUnitPrice();
             int numberOfDrink = (int) numUpDownNumOfDrink.Value;
-            dgvDrinkOrder.Rows.Add(new object[] {idOfDrink, nameOfDrink, numberOfDrink});
+            dgvDrinkOrder.Rows.Add(new object[] {idOfDrink, nameOfDrink, numberOfDrink, priceOfDrink});
+
+            calTotalPrice();
+        }
+
+        private void calTotalPrice()
+        {
+            int res = 0;
+            for (int row = 0; row < dgvDrinkOrder.Rows.Count; row++)
+            {
+                res += Int32.Parse(dgvDrinkOrder.Rows[row].Cells[2].Value.ToString()) * Int32.Parse(dgvDrinkOrder.Rows[row].Cells[3].Value.ToString());
+            }
+            txtTotalPrice.Text = res.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = dgvDrinkOrder.CurrentRow.Index;
+                dgvDrinkOrder.Rows.RemoveAt(index);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hãy chọn thức uống trong bảng hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            calTotalPrice();
+        }
+
+        private void dgvDrinkOrder_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (numUpDownNumOfDrink.DataBindings.Count > 0)
+            {
+                numUpDownNumOfDrink.DataBindings.RemoveAt(0);
+            }
+            numUpDownNumOfDrink.DataBindings.Add(new Binding("Text", dgvDrinkOrder[2, e.RowIndex], "value", false));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvDrinkOrder.RowCount; i++)
+                dgvDrinkOrder.Rows[i].Selected = false;
+            calTotalPrice();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dgvDrinkOrder.Rows.Clear();
+            calTotalPrice();
         }
     }
 }
