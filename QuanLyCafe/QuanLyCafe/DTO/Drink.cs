@@ -27,11 +27,29 @@ namespace QuanLyCafe.DTO
             return this.unitPrice;
         }
 
+        public void setId(int id)
+        {
+            this.id = id;
+        }
+
+        public void setNameOfDrink(string nameOfDrink)
+        {
+            this.nameOfDrink = nameOfDrink;
+        }
+
+        public void setUnitPrice(int unitPrice)
+        {
+            this.unitPrice = unitPrice;
+        }
+
         public Drink(DataRow row)
         {
             this.id = Int32.Parse(row["ID"].ToString());
             this.nameOfDrink = row["TENTHUCUONG"].ToString();
             this.unitPrice = Int32.Parse(row["DONGIA"].ToString());
         }
+
+        public Drink() 
+        { }
     }
 }

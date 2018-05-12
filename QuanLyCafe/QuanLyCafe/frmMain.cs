@@ -20,7 +20,10 @@ namespace QuanLyCafe
 
         private void ThongTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmInfo frm = new frmInfo();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void DangXuatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,6 +123,14 @@ namespace QuanLyCafe
             frm.ShowDialog();
             this.Show();
             loadDrinksListToComboBox();
+        }
+
+        private void tàiKhoảnQuảnTrịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAccountAdmin frm = new frmAccountAdmin();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }

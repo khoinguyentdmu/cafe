@@ -40,3 +40,23 @@ ALTER PROCEDURE USP_DangNhap @USERNAME VARCHAR(50), @PASSWORD VARCHAR(500)
 AS SELECT * from TBL_TAIKHOAN WHERE @USERNAME = TENDANGNHAP AND @PASSWORD = MATKHAU
 
 insert into TBL_TAIKHOAN values ('admin','admin');
+
+--Get danh sach admin
+CREATE PROCEDURE USP_GetAccountAdminsList
+AS SELECT * FROM TBL_TAIKHOAN
+
+--Them 1 tai khoan admin
+CREATE PROCEDURE USP_InsertAccountAdmin @username VARCHAR(50), @password VARCHAR(500)
+AS 
+BEGIN
+	DECLARE @CNT INT= (SELECT COUNT(*) FROM TBL_TAIKHOAN WHERE @username = TENDANGNHAP);
+	IF (@CNT=0) INSERT INTO TBL_TAIKHOAN VALUES (@username, @password);
+END
+
+--delete tai khoan admin
+CREATE PROCEDURE USP_DeleteAccountAdmin @ID INT
+AS DELETE FROM TBL_TAIKHOAN WHERE @ID = ID
+
+--update tai khoan admin
+CREATE PROCEDURE USP_UpdateAccountAdmin @ID INT, @username VARCHAR(50), @password VARCHAR(500)
+AS UPDATE TBL_TAIKHOAN SET TENDANGNHAP = @username, MATKHAU = @password WHERE ID = @ID;

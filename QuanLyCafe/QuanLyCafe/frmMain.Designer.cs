@@ -67,6 +67,7 @@
             this.ThongTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thứcUốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tàiKhoảnQuảnTrịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -106,7 +107,8 @@
             this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.chấmCôngToolStripMenuItem1,
             this.thôngTinNhânViênToolStripMenuItem,
-            this.thứcUốngToolStripMenuItem});
+            this.thứcUốngToolStripMenuItem,
+            this.tàiKhoảnQuảnTrịToolStripMenuItem});
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
@@ -468,15 +470,15 @@
             // 
             this.ThongTinToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinToolStripMenuItem.Image")));
             this.ThongTinToolStripMenuItem.Name = "ThongTinToolStripMenuItem";
-            this.ThongTinToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
-            this.ThongTinToolStripMenuItem.Text = "Thông tin tài khoản";
+            this.ThongTinToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
+            this.ThongTinToolStripMenuItem.Text = "Thông tin phần mềm";
             this.ThongTinToolStripMenuItem.Click += new System.EventHandler(this.ThongTinToolStripMenuItem_Click);
             // 
             // DangXuatToolStripMenuItem
             // 
             this.DangXuatToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DangXuatToolStripMenuItem.Image")));
             this.DangXuatToolStripMenuItem.Name = "DangXuatToolStripMenuItem";
-            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
             this.DangXuatToolStripMenuItem.Text = "Đăng xuất";
             this.DangXuatToolStripMenuItem.Click += new System.EventHandler(this.DangXuatToolStripMenuItem_Click);
             // 
@@ -487,6 +489,14 @@
             this.thứcUốngToolStripMenuItem.Size = new System.Drawing.Size(263, 24);
             this.thứcUốngToolStripMenuItem.Text = "Thức uống";
             this.thứcUốngToolStripMenuItem.Click += new System.EventHandler(this.thứcUốngToolStripMenuItem_Click);
+            // 
+            // tàiKhoảnQuảnTrịToolStripMenuItem
+            // 
+            this.tàiKhoảnQuảnTrịToolStripMenuItem.Image = global::QuanLyCafe.Properties.Resources.icon_account;
+            this.tàiKhoảnQuảnTrịToolStripMenuItem.Name = "tàiKhoảnQuảnTrịToolStripMenuItem";
+            this.tàiKhoảnQuảnTrịToolStripMenuItem.Size = new System.Drawing.Size(263, 24);
+            this.tàiKhoảnQuảnTrịToolStripMenuItem.Text = "Tài khoản quản trị";
+            this.tàiKhoảnQuảnTrịToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnQuảnTrịToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -569,6 +579,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNameOfDrink;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumberOfDrink;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUnitPirce;
+        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnQuảnTrịToolStripMenuItem;
     }
 }
 

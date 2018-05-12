@@ -51,7 +51,7 @@ namespace QuanLyCafe
             {
                 MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 loadListOfDrink();
-                lblNotify.Text = "Đã xóa thức uống vào CSDL";
+                lblNotify.Text = "Đã xóa thức uống khỏi CSDL";
             }
             else
             {

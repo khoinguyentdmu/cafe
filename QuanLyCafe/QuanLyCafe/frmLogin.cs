@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using QuanLyCafe.DAO;
+using QuanLyCafe.DTO;
 
 namespace QuanLyCafe
 {
@@ -50,7 +51,8 @@ namespace QuanLyCafe
         private void btnLogin_Click(object sender, EventArgs e)
         {
             txtUsername.Focus();
-            if (AccountDAO.Instance.DangNhap(txtUsername.Text, txtPassword.Text))
+
+            if (AccountAdminDAO.Instance.Login(txtUsername.Text, txtPassword.Text))
             {
                 frmMain frm = new frmMain();
                 this.Hide();

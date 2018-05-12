@@ -47,15 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\AccountAdminDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DrinkDAO.cs" />
+    <Compile Include="DTO\AccountAdmin.cs" />
     <Compile Include="DTO\Drink.cs" />
     <Compile Include="frmDrink.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDrink.Designer.cs">
       <DependentUpon>frmDrink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountAdmin.Designer.cs">
+      <DependentUpon>frmAccountAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfo.Designer.cs">
+      <DependentUpon>frmInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -74,6 +87,12 @@
     <None Include="app.config" />
     <EmbeddedResource Include="frmDrink.resx">
       <DependentUpon>frmDrink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountAdmin.resx">
+      <DependentUpon>frmAccountAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfo.resx">
+      <DependentUpon>frmInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -130,6 +149,15 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cafe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cafe1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

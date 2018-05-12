@@ -56,23 +56,5 @@ namespace QuanLyCafe.DAO
             int res = DataProvider.Instance.ExecuteNonQuery(query, new object[]{id, nameOfDrink, unitPrice});
             return res > 0;
         }
-        /*
-
-        //Tìm phòng
-        public List<Phong> FindPhong(string maPhong)
-        {
-            List<Phong> list = new List<Phong>();
-            string query = "USP_FindPhong @MP";
-
-            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { maPhong});
-
-            foreach (DataRow item in data.Rows)
-            {
-                Phong phong = new Phong(item);
-                list.Add(phong);
-            }
-
-            return list;
-        }*/
     }
 }
