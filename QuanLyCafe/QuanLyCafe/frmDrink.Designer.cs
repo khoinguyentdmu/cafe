@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDrink));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.btnCreate);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.btnUpdate);
@@ -72,24 +72,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thức uống";
             // 
-            // button4
+            // btnCreate
             // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::QuanLyCafe.Properties.Resources.icon_plus;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.Location = new System.Drawing.Point(10, 220);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(295, 71);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Tạo mới hóa đơn";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnCreate.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCreate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnCreate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.Color.Black;
+            this.btnCreate.Image = global::QuanLyCafe.Properties.Resources.icon_plus;
+            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCreate.Location = new System.Drawing.Point(10, 220);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(295, 71);
+            this.btnCreate.TabIndex = 3;
+            this.btnCreate.Text = "Tạo mới hóa đơn";
+            this.btnCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // label3
             // 
@@ -304,7 +304,7 @@
         private System.Windows.Forms.DataGridView dgvDrinkList;
         private System.Windows.Forms.TextBox txtUnitPrice;
         private System.Windows.Forms.TextBox txtNameOfDrink;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblNotify;
     }

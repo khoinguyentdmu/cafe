@@ -19,6 +19,7 @@ namespace QuanLyCafe
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            txtUsername.Focus();
             txtPassword.Clear();
             txtUsername.Clear();
             for (int i = 0; i < dgvAdminList.RowCount; i++)
@@ -37,7 +38,7 @@ namespace QuanLyCafe
             if (AccountAdminDAO.Instance.updateAccountAmin(id, username, password))
             {
                 MessageBox.Show("Đã cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadListOfAccountAdmin();
+                loadListOfAccountAdmins();
                 lblNotify.Text = "Đã cập nhật tài khoản quản trị vào CSDL";
             }
             else
@@ -56,14 +57,14 @@ namespace QuanLyCafe
             return true;
         }
 
-        private void loadListOfAccountAdmin()
+        private void loadListOfAccountAdmins()
         {
             dgvAdminList.DataSource = AccountAdminDAO.Instance.getAccountAdminsList();
         }
 
         private void frmAccountAdmin_Load(object sender, EventArgs e)
         {
-            loadListOfAccountAdmin();
+            loadListOfAccountAdmins();
         }
 
         private void dgvAdminList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -83,7 +84,7 @@ namespace QuanLyCafe
             if (AccountAdminDAO.Instance.insertAccountAdmin(username, password))
             {
                 MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadListOfAccountAdmin();
+                loadListOfAccountAdmins();
                 lblNotify.Text = "Đã thêm 1 tài khoản admin vào CSDL";
             }
             else
@@ -98,7 +99,7 @@ namespace QuanLyCafe
             if (AccountAdminDAO.Instance.deleteAccountAmin(id))
             {
                 MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadListOfAccountAdmin();
+                loadListOfAccountAdmins();
                 lblNotify.Text = "Đã xóa tài khoản khỏi CSDL";
             }
             else

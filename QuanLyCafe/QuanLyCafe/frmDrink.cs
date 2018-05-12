@@ -19,10 +19,10 @@ namespace QuanLyCafe
 
         private void frmDrink_Load(object sender, EventArgs e)
         {
-            loadListOfDrink();
+            loadListOfDrinks();
         }
 
-        private void loadListOfDrink()
+        private void loadListOfDrinks()
         {
             dgvDrinkList.DataSource = DrinkDAO.Instance.getDinksList();
         }
@@ -35,22 +35,13 @@ namespace QuanLyCafe
             lblNotify.Text = "Đã chọn 1 thức uống";
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            txtNameOfDrink.Clear();
-            txtUnitPrice.Clear();
-            for (int i = 0; i < dgvDrinkList.RowCount; i++)
-                dgvDrinkList.Rows[i].Selected = false;
-            lblNotify.Text = "Nhập thông tin nước uống để thêm vào CSDL";
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string id = dgvDrinkList.Rows[dgvDrinkList.CurrentRow.Index].Cells[0].Value.ToString();
             if (DrinkDAO.Instance.deleteDrink(id))
             {
                 MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadListOfDrink();
+                loadListOfDrinks();
                 lblNotify.Text = "Đã xóa thức uống khỏi CSDL";
             }
             else
@@ -69,7 +60,7 @@ namespace QuanLyCafe
             if (DrinkDAO.Instance.insertDrink(nameOfDrink, unitPrice))
             {
                 MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadListOfDrink();
+                loadListOfDrinks();
                 lblNotify.Text = "Đã thêm thức uống vào CSDL";
             }
             else
@@ -99,13 +90,23 @@ namespace QuanLyCafe
             if (DrinkDAO.Instance.updateDrink(id, nameOfDrink, unitPrice))
             {
                 MessageBox.Show("Đã cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadListOfDrink();
+                loadListOfDrinks();
                 lblNotify.Text = "Đã cập nhật thức uống vào CSDL";
             }
             else
             {
                 MessageBox.Show("Cập nhật không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            txtNameOfDrink.Focus();
+            txtNameOfDrink.Clear();
+            txtUnitPrice.Clear();
+            for (int i = 0; i < dgvDrinkList.RowCount; i++)
+                dgvDrinkList.Rows[i].Selected = false;
+            lblNotify.Text = "Nhập thông tin nước uống để thêm vào CSDL";
         }
     }
 }

@@ -39,26 +39,26 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtUnitSalary = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txt1DaySalary = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffList)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNotify
@@ -67,9 +67,9 @@
             this.lblNotify.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotify.Location = new System.Drawing.Point(9, 10);
             this.lblNotify.Name = "lblNotify";
-            this.lblNotify.Size = new System.Drawing.Size(306, 18);
+            this.lblNotify.Size = new System.Drawing.Size(298, 18);
             this.lblNotify.TabIndex = 0;
-            this.lblNotify.Text = "Nhập thông tin nước uống để thêm vào CSDL";
+            this.lblNotify.Text = "Nhập thông tin nhân viên để thêm vào CSDL";
             // 
             // panel2
             // 
@@ -78,7 +78,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 367);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(726, 36);
+            this.panel2.Size = new System.Drawing.Size(917, 36);
             this.panel2.TabIndex = 8;
             // 
             // groupBox1
@@ -89,7 +89,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
             this.groupBox1.Location = new System.Drawing.Point(321, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 356);
+            this.groupBox1.Size = new System.Drawing.Size(589, 356);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách nhân viên";
@@ -104,8 +104,9 @@
             this.dgvStaffList.MultiSelect = false;
             this.dgvStaffList.Name = "dgvStaffList";
             this.dgvStaffList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStaffList.Size = new System.Drawing.Size(387, 329);
+            this.dgvStaffList.Size = new System.Drawing.Size(578, 329);
             this.dgvStaffList.TabIndex = 0;
+            this.dgvStaffList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaffList_CellClick);
             // 
             // groupBox2
             // 
@@ -145,6 +146,7 @@
             this.btnCreate.Text = "Tạo mới thông tin";
             this.btnCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // label3
             // 
@@ -171,6 +173,7 @@
             this.btnDelete.Text = "Xóa thông tin";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -189,6 +192,7 @@
             this.btnUpdate.Text = "Cập nhật thông tin";
             this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -207,6 +211,61 @@
             this.btnAdd.Text = "Thêm vào danh sách";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.txtUnitSalary);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Location = new System.Drawing.Point(7, 139);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(298, 36);
+            this.panel5.TabIndex = 0;
+            // 
+            // txtUnitSalary
+            // 
+            this.txtUnitSalary.Location = new System.Drawing.Point(115, 6);
+            this.txtUnitSalary.Name = "txtUnitSalary";
+            this.txtUnitSalary.Size = new System.Drawing.Size(180, 24);
+            this.txtUnitSalary.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(3, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Lương 1 ngày:";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.txtAddress);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(6, 100);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(298, 36);
+            this.panel3.TabIndex = 0;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(115, 6);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(180, 24);
+            this.txtAddress.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Địa chỉ: ";
             // 
             // panel1
             // 
@@ -262,85 +321,34 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Họ và tên: ";
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txtAddress);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(6, 100);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(298, 36);
-            this.panel3.TabIndex = 0;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(115, 6);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(180, 24);
-            this.txtAddress.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(13, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Địa chỉ: ";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.txt1DaySalary);
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(7, 139);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(298, 36);
-            this.panel5.TabIndex = 0;
-            // 
-            // txt1DaySalary
-            // 
-            this.txt1DaySalary.Location = new System.Drawing.Point(115, 6);
-            this.txt1DaySalary.Name = "txt1DaySalary";
-            this.txt1DaySalary.Size = new System.Drawing.Size(180, 24);
-            this.txt1DaySalary.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(3, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Lương 1 ngày:";
-            // 
             // frmStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 403);
+            this.ClientSize = new System.Drawing.Size(917, 403);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(933, 442);
+            this.MinimumSize = new System.Drawing.Size(933, 442);
             this.Name = "frmStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "THÔNG TIN NHÂN VIÊN";
+            this.Load += new System.EventHandler(this.frmStaff_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffList)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -358,7 +366,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txt1DaySalary;
+        private System.Windows.Forms.TextBox txtUnitSalary;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtAddress;

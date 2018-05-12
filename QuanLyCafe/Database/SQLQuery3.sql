@@ -34,6 +34,9 @@ EXEC USP_DeleteDrink 13
 CREATE PROCEDURE USP_UpdateDrink @ID INT, @NAME NVARCHAR(50), @UNITPRICE INT
 AS UPDATE TBL_THUCUONG SET TENTHUCUONG = @NAME, DONGIA = @UNITPRICE WHERE ID = @ID;
 
+
+
+
 --Kiem tra dang nhap
 
 ALTER PROCEDURE USP_DangNhap @USERNAME VARCHAR(50), @PASSWORD VARCHAR(500)
@@ -60,3 +63,24 @@ AS DELETE FROM TBL_TAIKHOAN WHERE @ID = ID
 --update tai khoan admin
 CREATE PROCEDURE USP_UpdateAccountAdmin @ID INT, @username VARCHAR(50), @password VARCHAR(500)
 AS UPDATE TBL_TAIKHOAN SET TENDANGNHAP = @username, MATKHAU = @password WHERE ID = @ID;
+
+--Get danh sach nhan vien
+CREATE PROCEDURE USP_GetStaffsList
+AS select * from TBL_NHANVIEN
+
+--insert nhan vien
+CREATE PROCEDURE USP_InsertStaff @name NVARCHAR(50), @tel VARCHAR(11), @address NVARCHAR(100), @unitSalary INT
+AS 
+BEGIN
+	DECLARE @CNT INT= (SELECT COUNT(*) FROM TBL_NHANVIEN WHERE @name = HOTEN AND @tel = SDT AND @address = DIACHI AND @unitSalary = HESOLUONG);
+	IF (@CNT=0) INSERT INTO TBL_NHANVIEN VALUES (@name, @tel, @address, @unitSalary);
+END
+
+
+--delete nhan vien
+CREATE PROCEDURE USP_DeleteStaff @ID INT
+AS DELETE FROM TBL_NHANVIEN WHERE @ID = ID
+
+--update nhan vien
+CREATE PROCEDURE USP_UpdateStaff @ID INT, @name NVARCHAR(50), @tel VARCHAR(11), @address NVARCHAR(100), @unitSalary INT
+AS UPDATE TBL_NHANVIEN SET HOTEN = @name, SDT = @tel, DIACHI = @address, HESOLUONG = @unitSalary WHERE ID = @ID;
