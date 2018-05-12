@@ -132,5 +132,13 @@ namespace QuanLyCafe
             frm.ShowDialog();
             this.Show();
         }
+
+        private void thôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStaff frm = new frmStaff();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

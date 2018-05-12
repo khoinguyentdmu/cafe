@@ -121,9 +121,11 @@
             // 
             // thôngTinNhânViênToolStripMenuItem
             // 
+            this.thôngTinNhânViênToolStripMenuItem.Image = global::QuanLyCafe.Properties.Resources.icon_staff;
             this.thôngTinNhânViênToolStripMenuItem.Name = "thôngTinNhânViênToolStripMenuItem";
             this.thôngTinNhânViênToolStripMenuItem.Size = new System.Drawing.Size(263, 24);
             this.thôngTinNhânViênToolStripMenuItem.Text = "Thông tin nhân viên";
+            this.thôngTinNhânViênToolStripMenuItem.Click += new System.EventHandler(this.thôngTinNhânViênToolStripMenuItem_Click);
             // 
             // báoCáoToolStripMenuItem
             // 
