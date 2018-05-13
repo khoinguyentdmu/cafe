@@ -36,7 +36,7 @@ namespace QuanLyCafe.DAO
 
         public bool Login(string username, string password)
         {
-            string query = "USP_DangNhap @USERNAME , @PASSWORD";
+            string query = "USP_Login @USERNAME , @PASSWORD";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, encode(password)});
 

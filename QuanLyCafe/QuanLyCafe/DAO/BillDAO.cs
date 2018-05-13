@@ -21,7 +21,6 @@ namespace QuanLyCafe.DAO
 
         public int getLatestBill()
         {
-            List<Bill> list = new List<Bill>();
             string query = "USP_GetLatestBill";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             Bill bill = new Bill(data.Rows[0]);

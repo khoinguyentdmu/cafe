@@ -183,5 +183,13 @@ namespace QuanLyCafe
             frmBillReport frm = new frmBillReport(Convert.ToString(idBill));
             frm.ShowDialog();
         }
+
+        private void báoCáoDanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIncomeReport frm = new frmIncomeReport();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

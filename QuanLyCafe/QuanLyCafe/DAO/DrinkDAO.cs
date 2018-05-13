@@ -21,15 +21,20 @@ namespace QuanLyCafe.DAO
 
         public DataTable getDinksList()
         {
-            List<Drink> list = new List<Drink>();
             string query = "USP_GetDinksList";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
 
+        public DataTable getSoldDinksList(string start, string end)
+        {
+            string query = "USP_GetSoldDrinksList @START , @END";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { start, end });
+            return data;
+        }
+
         public Drink getDink(int id)
         {
-            List<Drink> list = new List<Drink>();
             string query = "USP_GetDrink @id";
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] {id});
             Drink drink= new Drink(data.Rows[0]);

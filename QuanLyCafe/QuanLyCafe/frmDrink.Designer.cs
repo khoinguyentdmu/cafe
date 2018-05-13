@@ -163,14 +163,14 @@
             this.panel1.Location = new System.Drawing.Point(6, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(298, 36);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // txtUnitPrice
             // 
             this.txtUnitPrice.Location = new System.Drawing.Point(106, 6);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(189, 24);
-            this.txtUnitPrice.TabIndex = 1;
+            this.txtUnitPrice.TabIndex = 0;
             // 
             // label5
             // 
@@ -197,7 +197,7 @@
             this.txtNameOfDrink.Location = new System.Drawing.Point(106, 6);
             this.txtNameOfDrink.Name = "txtNameOfDrink";
             this.txtNameOfDrink.Size = new System.Drawing.Size(189, 24);
-            this.txtNameOfDrink.TabIndex = 0;
+            this.txtNameOfDrink.TabIndex = 1;
             // 
             // label6
             // 

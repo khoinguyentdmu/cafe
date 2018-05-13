@@ -190,14 +190,14 @@
             this.panel1.Location = new System.Drawing.Point(6, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(298, 36);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(162, 6);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(133, 24);
-            this.txtPassword.TabIndex = 1;
+            this.txtPassword.TabIndex = 0;
             // 
             // label5
             // 

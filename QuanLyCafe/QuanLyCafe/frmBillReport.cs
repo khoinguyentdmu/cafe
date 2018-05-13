@@ -26,7 +26,7 @@ namespace QuanLyCafe
             reportViewer1.LocalReport.ReportPath = "ReportBill.rdlc";
 
             ReportDataSource rds = new ReportDataSource();
-            rds.Name = "DataBill";
+            rds.Name = "DataSet1";
             rds.Value = DAO.BillDAO.Instance.getDinksBillList(this.idBill);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(rds);

@@ -173,12 +173,15 @@
             // 
             // báoCáoDanhThuToolStripMenuItem
             // 
+            this.báoCáoDanhThuToolStripMenuItem.Image = global::QuanLyCafe.Properties.Resources.icon_report;
             this.báoCáoDanhThuToolStripMenuItem.Name = "báoCáoDanhThuToolStripMenuItem";
             this.báoCáoDanhThuToolStripMenuItem.Size = new System.Drawing.Size(249, 24);
             this.báoCáoDanhThuToolStripMenuItem.Text = "Thống kê doanh thu";
+            this.báoCáoDanhThuToolStripMenuItem.Click += new System.EventHandler(this.báoCáoDanhThuToolStripMenuItem_Click);
             // 
             // thốngKêLươngNhânViênToolStripMenuItem
             // 
+            this.thốngKêLươngNhânViênToolStripMenuItem.Image = global::QuanLyCafe.Properties.Resources.icon_report;
             this.thốngKêLươngNhânViênToolStripMenuItem.Name = "thốngKêLươngNhânViênToolStripMenuItem";
             this.thốngKêLươngNhânViênToolStripMenuItem.Size = new System.Drawing.Size(249, 24);
             this.thốngKêLươngNhânViênToolStripMenuItem.Text = "Thống kê lương nhân viên";
@@ -413,7 +416,7 @@
             this.cboNameOfDrink.Location = new System.Drawing.Point(106, 6);
             this.cboNameOfDrink.Name = "cboNameOfDrink";
             this.cboNameOfDrink.Size = new System.Drawing.Size(189, 26);
-            this.cboNameOfDrink.TabIndex = 1;
+            this.cboNameOfDrink.TabIndex = 0;
             // 
             // label1
             // 

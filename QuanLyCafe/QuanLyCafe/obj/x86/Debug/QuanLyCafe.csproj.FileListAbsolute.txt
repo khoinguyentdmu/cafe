@@ -14,3 +14,10 @@ D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanL
 D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.frmWorkSchedule.resources
 D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.frmWorkScheduleReport.resources
 D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.frmBillReport.resources
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.csprojResolveAssemblyReference.cache
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\bin\Debug\ReportDayWork.rdlc
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\RdlCompile.cache
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\RdlCompile.compiled
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.frmIncomeReport.resources
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\bin\Debug\ReportIncome.rdlc
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\bin\Debug\ReportBill.rdlc

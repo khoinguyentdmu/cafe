@@ -21,7 +21,6 @@ namespace QuanLyCafe.DAO
 
         public DataTable getStaffsList()
         {
-            List<Staff> list = new List<Staff>();
             string query = "USP_GetStaffsList";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
@@ -46,6 +45,13 @@ namespace QuanLyCafe.DAO
             string query = "USP_UpdateStaff @ID , @NAME , @TEL , @ADDRESS , @UNITSALARY";
             int res = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id, name, tel, address, unitSalary });
             return res > 0;
+        }
+
+        public DataTable getWorkDayStaffList(string start, string end)
+        {
+            string query = "USP_GetWorkDayStaffList @START , @END";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[]{ start, end });
+            return data;
         }
     }
 }

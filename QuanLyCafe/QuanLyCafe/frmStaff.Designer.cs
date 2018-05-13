@@ -125,7 +125,7 @@
             this.groupBox2.Location = new System.Drawing.Point(5, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(310, 356);
-            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhân viên";
             // 
@@ -220,14 +220,14 @@
             this.panel5.Location = new System.Drawing.Point(7, 139);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(298, 36);
-            this.panel5.TabIndex = 0;
+            this.panel5.TabIndex = 3;
             // 
             // txtUnitSalary
             // 
             this.txtUnitSalary.Location = new System.Drawing.Point(115, 6);
             this.txtUnitSalary.Name = "txtUnitSalary";
             this.txtUnitSalary.Size = new System.Drawing.Size(180, 24);
-            this.txtUnitSalary.TabIndex = 1;
+            this.txtUnitSalary.TabIndex = 0;
             // 
             // label2
             // 
@@ -247,14 +247,14 @@
             this.panel3.Location = new System.Drawing.Point(6, 100);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(298, 36);
-            this.panel3.TabIndex = 0;
+            this.panel3.TabIndex = 2;
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(115, 6);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(180, 24);
-            this.txtAddress.TabIndex = 1;
+            this.txtAddress.TabIndex = 0;
             // 
             // label1
             // 
@@ -274,7 +274,7 @@
             this.panel1.Location = new System.Drawing.Point(6, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(298, 36);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // txtTel
             // 

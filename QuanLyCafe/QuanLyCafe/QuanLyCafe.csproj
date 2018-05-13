@@ -63,8 +63,10 @@
     <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DTO\AccountAdmin.cs" />
     <Compile Include="DTO\Bill.cs" />
+    <Compile Include="DTO\DayWorkStaff.cs" />
     <Compile Include="DTO\Drink.cs" />
     <Compile Include="DTO\DrinkBill.cs" />
+    <Compile Include="DTO\DrinkSold.cs" />
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\DayWork.cs" />
     <Compile Include="frmBillReport.cs">
@@ -84,6 +86,12 @@
     </Compile>
     <Compile Include="frmAccountAdmin.Designer.cs">
       <DependentUpon>frmAccountAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIncomeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIncomeReport.Designer.cs">
+      <DependentUpon>frmIncomeReport.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInfo.cs">
       <SubType>Form</SubType>
@@ -125,6 +133,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBillReport.resx">
       <DependentUpon>frmBillReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIncomeReport.resx">
+      <DependentUpon>frmIncomeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportBill.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDayWork.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportIncome.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="app.config" />
     <EmbeddedResource Include="frmDrink.resx">
@@ -238,6 +258,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_report.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

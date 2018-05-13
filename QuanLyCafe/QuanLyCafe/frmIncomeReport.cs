@@ -10,33 +10,27 @@ using Microsoft.Reporting.WinForms;
 
 namespace QuanLyCafe
 {
-    public partial class frmWorkScheduleReport : Form
+    public partial class frmIncomeReport : Form
     {
-        public frmWorkScheduleReport()
+        public frmIncomeReport()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnExec_Click(object sender, EventArgs e)
         {
             reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
-            reportViewer1.LocalReport.ReportPath = "ReportDayWork.rdlc";
+            reportViewer1.LocalReport.ReportPath = "ReportIncome.rdlc";
 
             ReportDataSource rds = new ReportDataSource();
             rds.Name = "DataSet1";
             string startTime = dtpStart.Value.ToShortDateString();
             string endTime = dtpEnd.Value.ToShortDateString();
-            rds.Value = DAO.StaffDAO.Instance.getWorkDayStaffList(startTime, endTime);
+            rds.Value = DAO.DrinkDAO.Instance.getSoldDinksList(startTime, endTime);
             reportViewer1.LocalReport.DataSources.Clear();
 
             reportViewer1.LocalReport.DataSources.Add(rds);
             reportViewer1.RefreshReport();
-        }
-
-        private void frmWorkScheduleReport_Load(object sender, EventArgs e)
-        {
-
-            this.reportViewer1.RefreshReport();
         }
     }
 }
