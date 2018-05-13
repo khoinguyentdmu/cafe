@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCafe
 {
-    partial class frmWorkScheduleReport
+    partial class frmBillReport
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBillReport));
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(3, 48);
+            this.reportViewer1.Location = new System.Drawing.Point(1, 3);
+            this.reportViewer1.MaximumSize = new System.Drawing.Size(492, 336);
+            this.reportViewer1.MinimumSize = new System.Drawing.Size(492, 336);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(719, 305);
-            this.reportViewer1.TabIndex = 1;
+            this.reportViewer1.Size = new System.Drawing.Size(492, 336);
+            this.reportViewer1.TabIndex = 0;
             // 
-            // frmWorkScheduleReport
+            // frmBillReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 354);
+            this.ClientSize = new System.Drawing.Size(496, 340);
             this.Controls.Add(this.reportViewer1);
-            this.Controls.Add(this.button1);
-            this.Name = "frmWorkScheduleReport";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmBillReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmWorkScheduleReport";
-            this.Load += new System.EventHandler(this.frmWorkScheduleReport_Load);
+            this.Text = "Hóa đơn";
+            this.Load += new System.EventHandler(this.frmBill_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

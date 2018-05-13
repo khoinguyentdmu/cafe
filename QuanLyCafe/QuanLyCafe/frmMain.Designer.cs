@@ -47,9 +47,10 @@
             this.lblNotify = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnPay = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -218,9 +219,10 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.btnPay);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.btnPrint);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.panel3);
@@ -241,6 +243,25 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(300, 2);
             this.label4.TabIndex = 2;
+            // 
+            // btnPay
+            // 
+            this.btnPay.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.Black;
+            this.btnPay.Image = global::QuanLyCafe.Properties.Resources.icon_pay;
+            this.btnPay.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPay.Location = new System.Drawing.Point(210, 209);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(92, 71);
+            this.btnPay.TabIndex = 1;
+            this.btnPay.Text = "Thanh toán";
+            this.btnPay.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // button2
             // 
@@ -280,23 +301,24 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // btnPrint
             // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::QuanLyCafe.Properties.Resources.icon_print;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.Location = new System.Drawing.Point(107, 209);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 71);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Thanh toán và in hóa đơn";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnPrint.Image = global::QuanLyCafe.Properties.Resources.icon_print;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPrint.Location = new System.Drawing.Point(108, 209);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(92, 71);
+            this.btnPrint.TabIndex = 1;
+            this.btnPrint.Text = "In hóa đơn";
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // button4
             // 
@@ -434,7 +456,6 @@
             this.dgvDrinkOrder.Size = new System.Drawing.Size(480, 257);
             this.dgvDrinkOrder.TabIndex = 0;
             this.dgvDrinkOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDrinkOrder_CellClick);
-            this.dgvDrinkOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // colID
             // 
@@ -570,7 +591,7 @@
         private System.Windows.Forms.Label lblNotify;
         private System.Windows.Forms.DataGridView dgvDrinkOrder;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTime;
@@ -585,6 +606,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumberOfDrink;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUnitPirce;
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnQuảnTrịToolStripMenuItem;
+        private System.Windows.Forms.Button btnPrint;
     }
 }
 

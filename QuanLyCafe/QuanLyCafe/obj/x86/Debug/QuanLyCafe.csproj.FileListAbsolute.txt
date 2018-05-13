@@ -13,3 +13,4 @@ D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanL
 D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.frmStaff.resources
 D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.frmWorkSchedule.resources
 D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.frmWorkScheduleReport.resources
+D:\StudyDocuments\TDMU_4Years\Nam3_HK2\KienTrucVaThuThapYeuCauPhanMem\Demo\QuanLyCafe\QuanLyCafe\obj\x86\Debug\QuanLyCafe.frmBillReport.resources

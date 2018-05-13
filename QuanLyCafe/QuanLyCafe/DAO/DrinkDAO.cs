@@ -56,5 +56,12 @@ namespace QuanLyCafe.DAO
             int res = DataProvider.Instance.ExecuteNonQuery(query, new object[]{id, nameOfDrink, unitPrice});
             return res > 0;
         }
+
+        public bool insertDrinkToBill(string idBill, string idDrink, string numberOfDrink)
+        {
+            string query = "USP_InsertDrinkToBill @IDBILL , @IDDRINK , @NUM";
+            int res = DataProvider.Instance.ExecuteNonQuery(query, new object[] { idBill, idDrink, numberOfDrink });
+            return res > 0;
+        }
     }
 }

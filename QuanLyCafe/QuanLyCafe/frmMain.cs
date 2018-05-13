@@ -43,11 +43,6 @@ namespace QuanLyCafe
             cboNameOfDrink.DataSource = DrinkDAO.Instance.getDinksList();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString();
@@ -114,6 +109,7 @@ namespace QuanLyCafe
             dgvDrinkOrder.Rows.Clear();
             calTotalPrice();
             lblNotify.Text = "Vui lòng chọn thức uống từ combo box và nhập số lượng để thêm vào hóa đơn";
+            btnPay.Enabled = true;
         }
 
         private void thứcUốngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -155,6 +151,37 @@ namespace QuanLyCafe
             this.Hide();
             frm.ShowDialog();
             this.Show();
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            if (dgvDrinkOrder.Rows.Count <= 0)
+                return;
+            try
+            {
+                BillDAO.Instance.insertNewEmptyBill().ToString();
+                int idBill = BillDAO.Instance.getLatestBill();
+                for (int row = 0; row < dgvDrinkOrder.Rows.Count; row++)
+                {
+                    string idDrink= dgvDrinkOrder.Rows[row].Cells[0].Value.ToString();
+                    string numberOfDrink= dgvDrinkOrder.Rows[row].Cells[2].Value.ToString();
+                    bool res= DrinkDAO.Instance.insertDrinkToBill(idBill.ToString(), idDrink, numberOfDrink);
+                    if (!res) throw new System.Exception();
+                }
+                MessageBox.Show("Đã thanh toán thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnPay.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            int idBill = BillDAO.Instance.getLatestBill();
+            frmBillReport frm = new frmBillReport(Convert.ToString(idBill));
+            frm.ShowDialog();
         }
     }
 }
