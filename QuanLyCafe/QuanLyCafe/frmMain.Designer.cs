@@ -33,7 +33,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chấmCôngToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoDanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêLươngNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,6 +64,7 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.ThongTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chấmCôngToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thứcUốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnQuảnTrịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,12 +112,6 @@
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
-            // 
-            // chấmCôngToolStripMenuItem1
-            // 
-            this.chấmCôngToolStripMenuItem1.Name = "chấmCôngToolStripMenuItem1";
-            this.chấmCôngToolStripMenuItem1.Size = new System.Drawing.Size(263, 24);
-            this.chấmCôngToolStripMenuItem1.Text = "Chấm công lương nhân viên";
             // 
             // báoCáoToolStripMenuItem
             // 
@@ -475,6 +469,14 @@
             this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
             this.DangXuatToolStripMenuItem.Text = "Đăng xuất";
             this.DangXuatToolStripMenuItem.Click += new System.EventHandler(this.DangXuatToolStripMenuItem_Click);
+            // 
+            // chấmCôngToolStripMenuItem1
+            // 
+            this.chấmCôngToolStripMenuItem1.Image = global::QuanLyCafe.Properties.Resources.icon_staff21;
+            this.chấmCôngToolStripMenuItem1.Name = "chấmCôngToolStripMenuItem1";
+            this.chấmCôngToolStripMenuItem1.Size = new System.Drawing.Size(263, 24);
+            this.chấmCôngToolStripMenuItem1.Text = "Chấm công lương nhân viên";
+            this.chấmCôngToolStripMenuItem1.Click += new System.EventHandler(this.chấmCôngToolStripMenuItem1_Click);
             // 
             // thôngTinNhânViênToolStripMenuItem
             // 
