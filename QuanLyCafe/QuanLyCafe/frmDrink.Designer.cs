@@ -86,7 +86,7 @@
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(295, 71);
             this.btnCreate.TabIndex = 3;
-            this.btnCreate.Text = "Tạo mới hóa đơn";
+            this.btnCreate.Text = "Tạo mới thức uống";
             this.btnCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
