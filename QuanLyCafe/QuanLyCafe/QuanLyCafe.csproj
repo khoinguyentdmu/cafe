@@ -181,6 +181,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="CSDL_QLCAFEDataSet.xsc">
       <DependentUpon>CSDL_QLCAFEDataSet.xsd</DependentUpon>
     </None>
